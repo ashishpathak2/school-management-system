@@ -53,6 +53,8 @@
 2. **Logout**  
    **Endpoint:** `/admin/logout` (GET)
 
+-----------------------------------------------------
+
 ## 2. TEACHER API DOCUMENTATION:
 
 ### **Note:**
@@ -126,10 +128,174 @@ For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is 
 ### 5. SOFT DELETE TEACHER BY ID
 
 **Endpoint:**  
-`/teacher/updateteacherbyid/:id` (DELETE)
+`/teacher/deleteteacherbyid/:id` (DELETE)
 
 - **Description:** Soft deletes a teacher by marking them inactive instead of permanently removing them from the system.
 - **Parameters:**
   - `:id` (mandatory): The unique identifier of the teacher.
 - **Example:**  
-  `/teacher/updateteacherbyid/12345`
+  `/teacher/deleteteacherbyid/12345`
+
+--------------------------------------------------------------------
+
+## 2. CLASS API DOCUMENTATION:
+
+### **Note:**
+
+For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is required.
+
+---
+
+### 1. GET ALL CLASSES 
+
+**Endpoint:**
+`/class/allclass/` (GET)
+
+- **Description:** Retrieves all classes.
+
+---
+
+### 2. GET CLASS BY ID
+
+**Endpoint:**  
+`/class/getclassbyid/:id` (GET)
+
+- **Description:** Retrieves class details by their unique ID.
+- **Parameters:**
+  - `:id` (mandatory): The unique identifier of the class.
+- **Example:**  
+  `/class/getclassbyid/12345`
+
+---
+
+### 3. ADD CLASS
+
+**Endpoint:**  
+`/class/addclass/` (POST)
+
+- **Description:** Adds a new class to the system.
+- **Request Body:**
+  ```json
+  {
+    "name": "", // Class name
+    "teacherId": "", // Referencing teacher Id 
+    "studentCount": "", // Class student count
+  }
+
+---
+
+### 4. UPDATE CLASS BY ID
+
+**Endpoint:**  
+`/class/updateclassbyid/:id/` (PUT)
+
+- **Description:** Updates the details of an existing class.
+- **Parameters:**
+  - `:id` (mandatory): The unique identifier of the class.
+- **Request Body:**
+  ```json
+  {
+    "name": "", // Class name
+    "teacherId": "", // Referencing teacher Id 
+    "studentCount": "", // Class student count
+  }
+
+---
+
+### 5. DELETE CLASS BY ID
+
+**Endpoint:**  
+`/class/deleteclassbyid/:id` (DELETE)
+
+- **Description:**Deletes a class permanently.
+- **Parameters:**
+  - `:id` (mandatory): The unique identifier of the class.
+- **Example:**  
+  `/class/deleteclassbyid/12345`
+
+-----------------------------------------------------
+
+## 2. STUDENT API DOCUMENTATION:
+
+### **Note:**
+
+For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is required.
+
+---
+
+### 1. GET ALL STUDENTS WITH PAGINATION AND FILTER
+
+**Endpoint:**  
+`student/allstudent/:classId/:page` (GET)
+
+- **Description:** Retrieves all student with pagination and class filteration.
+- **Parameters:**
+  - `:classId` (mandatory pass- "all"): Class Id for filtering students. If filtering not required just pass "all" (mandatory)
+  - `:page` : Page number. If left blank, defaults to `1`.
+- **Example:**  
+  `student/allstudent/all/1` - Display all students.
+  `student/allstudent/12345/1` - Display the filtered student only.
+
+---
+
+### 2. GET STUDENT BY ID
+
+**Endpoint:**  
+`/student/getstudentbyid/:id` (GET)
+
+- **Description:** Retrieves student details by their unique ID.
+- **Parameters:**
+  - `:id` (mandatory): The unique identifier of the student.
+- **Example:**  
+  `/student/getstudentbyid/12345`
+
+---
+
+### 3. ADD STUDENT
+
+**Endpoint:**  
+`/student/addstudent/` (POST)
+
+- **Description:** Adds a new student to the system.
+- **Request Body (form-data):**
+  ```json
+  {
+    "name": "", // student's name
+    "email": "", // student's email
+    "classId": "", // Refering class's Id
+    "file": "" // student's image (type: file)
+  }
+
+---
+
+### 4. UPDATE STUDENT BY ID
+
+**Endpoint:**  
+`/student/updatestudentbyid/:id/` (PUT)
+
+- **Description:** Updates the details of an existing student.
+- **Parameters:**
+  - `:id` (mandatory): The unique identifier of the student.
+- **Request Body (form-data):**
+  ```json
+  {
+    "name": "", // Updated name of the student
+    "email": "", // Updated email of the student
+    "subject": "", // Updated Refering class's Id
+    "file": "" // Updated image of the student (type: file)
+  }
+
+---
+
+### 5. SOFT DELETE STUDENT BY ID
+
+**Endpoint:**  
+`/student/deletestudentbyid/:id` (DELETE)
+
+- **Description:** Soft deletes a student by marking them inactive instead of permanently removing them from the system.
+- **Parameters:**
+  - `:id` (mandatory): The unique identifier of the student.
+- **Example:**  
+  `/student/deletestudentbyid/12345`
+
+--------------------------------------------------------------------
