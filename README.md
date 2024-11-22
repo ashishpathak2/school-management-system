@@ -3,13 +3,13 @@
  1) Install Node.js. ( Link : https://nodejs.org/en/download/prebuilt-installer )
    
  2) Set up a MongoDB Community Server and MongoDB Compass in your system.
-   ***BELOW LINKS WILL AUTOMATICALLY DOWNLOAD THE REQUIRED SOFTWARE AFTER PASTING IN THE BROWSER URL AND PRESS ENTER***
+   ***BELOW LINKS WILL AUTOMATICALLY STARTS DOWNLOADING THE REQUIRED SOFTWARE , JUST CLICK ON IT***
    1) MongoDB Community Server Link : https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.3-signed.msi 
    2) MongoDB Compass Link : https://downloads.mongodb.com/compass/mongodb-compass-1.44.7-win32-x64.exe 
 
- 3) Create a Cloudinary account. Link ( Link : https://cloudinary.com/users/register_free )
+ 3) Create a Cloudinary account. ( Link : https://cloudinary.com/users/register_free )
    
- 4) Install POSTMAN in your system. ( Link : https://www.postman.com/downloads/ )
+ 4) Install POSTMAN. ( Link : https://www.postman.com/downloads/ )
 
 
 ## STEPS :
@@ -23,16 +23,17 @@
       3) CLOUDINARY_API_KEY=YOUR_CLOUDINARY_API_KEY_HERE
       4) CLOUDINARY_API_SECRET=YOUR_CLOUDINARY_API_SECRET_HERE
    
-    4) Run the Server with Command : npx nodemon
+    4) Run the Server with Command : <pre>npx nodemon</pre>
    
     5) Access the application:
       1) Open POSTMAN and go to localhost:3000
+
 
 ---------------------------------------------------------
 # API ENDPOINTS:
 
 ## ADMIN:
-**Note:** The first admin will be created automatically.
+**Note:** The first admin will be created automatically.Check your console.
 
 1) **Login**  
    **Endpoint:** `/admin/login` (POST)  
