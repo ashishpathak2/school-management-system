@@ -26,7 +26,7 @@
     3. CLOUDINARY_API_KEY=YOUR_CLOUDINARY_API_KEY_HERE
     4. CLOUDINARY_API_SECRET=YOUR_CLOUDINARY_API_SECRET_HERE
 
-4.  Run the Server with Command : npx nodemon
+4.  Run the Server with Command : `npx nodemon`
 
 5.  Access the application:
     1. Open POSTMAN and go to localhost:3000
