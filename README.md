@@ -299,3 +299,20 @@ For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is 
   `/student/deletestudentbyid/12345`
 
 --------------------------------------------------------------------
+
+# ADDITIONAL FEATURES :
+
+1) JWT-based authentication for admin access.
+   - Implemented secure authentication for admin access.
+
+2) Protect routes to ensure only authorized users can perform operations.
+   - Restricted ADD, UPDATE, and DELETE operations to authorized admins for all models.
+
+3)  Allow uploading and updating profile images for students and teachers using Cloudinary. 
+   - Enabled profile image upload and updates for students and teachers via Cloudinary, managed by admins.
+   - Optimized image URLs stored in the database for efficient retrieval
+   - Automatically deletes old images from Cloudinary when updating profiles of students/teachers.
+
+4) Handle common errors like duplicate entries, invalid data, etc. 
+   - Implemented validations to handle duplicate entries, invalid data, and common errors.
+   - Acknowledges room for further improvements in error handling. 
