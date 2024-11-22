@@ -24,7 +24,7 @@
       4) CLOUDINARY_API_SECRET=YOUR_CLOUDINARY_API_SECRET_HERE
 
    4) Run the Server with Command : npx nodemon
-   
+
    5) Access the application:
       1) Open POSTMAN and go to localhost:3000
 
@@ -46,3 +46,83 @@
 
 2) **Logout**  
    **Endpoint:** `/admin/logout` (GET)  
+
+
+# TEACHER API DOCUMENTATION
+
+### **Note:**  
+For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is required.
+
+---
+
+## 1. GET ALL TEACHERS WITH PAGINATION  
+**Endpoint:**  
+`/teacher/allteacher/:page` (GET)  
+
+- **Description:** Retrieves all teachers with pagination.  
+- **Parameters:**  
+  - `:page` (optional): Page number. If left blank, defaults to `1`.  
+- **Example:**  
+  `/teacher/allteacher/1`
+
+---
+
+## 2. GET TEACHER BY ID  
+**Endpoint:**  
+`/teacher/getteacherbyid/:id` (GET)  
+
+- **Description:** Retrieves teacher details by their unique ID.  
+- **Parameters:**  
+  - `:id` (mandatory): The unique identifier of the teacher.  
+- **Example:**  
+  `/teacher/getteacherbyid/12345`
+
+---
+
+## 3. ADD TEACHER  
+**Endpoint:**  
+`/teacher/addteacher/` (POST)  
+
+- **Description:** Adds a new teacher to the system.  
+- **Request Body (form-data):**  
+  ```json
+  {
+    "name": "",      // Teacher's name
+    "email": "",     // Teacher's email
+    "subject": "",   // Teacher's subject expertise
+    "file": ""       // Teacher's image (type: file)
+  }
+
+
+---
+
+## 4. UPDATE TEACHER BY ID  
+**Endpoint:**  
+`/teacher/updateteacherbyid/:id/` (PUT)  
+
+- **Description:** Updates the details of an existing teacher.  
+- **Parameters:**  
+  - `:id` (mandatory): The unique identifier of the teacher.  
+- **Request Body (form-data):**  
+  ```json
+  {
+    "name": "",      // Updated name of the teacher
+    "email": "",     // Updated email of the teacher
+    "subject": "",   // Updated subject expertise
+    "file": ""       // Updated image of the teacher (type: file)
+  }
+
+---
+
+## 5. SOFT DELETE TEACHER BY ID
+**Endpoint:**  
+`/teacher/updateteacherbyid/:id` (DELETE)  
+
+- **Description:** Soft deletes a teacher by marking them inactive instead of permanently removing them from the system.
+- **Parameters:**  
+  - `:id` (mandatory): The unique identifier of the teacher.  
+- **Example:**  
+`/teacher/updateteacherbyid/12345`
+
+
+    
