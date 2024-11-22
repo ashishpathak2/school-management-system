@@ -32,7 +32,7 @@
 ---------------------------------------------------------
 # API ENDPOINTS:
 
-## ADMIN:
+## ADMIN API DOCUMENTATION:
 **Note:** The first admin will be created automatically.Check your console.
 
 1) **Login**  
@@ -48,7 +48,8 @@
    **Endpoint:** `/admin/logout` (GET)  
 
 
-# TEACHER API DOCUMENTATION
+
+# TEACHER API DOCUMENTATION:
 
 ### **Note:**  
 For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is required.
