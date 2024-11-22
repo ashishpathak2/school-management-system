@@ -6,18 +6,18 @@
 
 2.  Set up a MongoDB Community Server and MongoDB Compass in your system.
     **_BELOW LINKS WILL AUTOMATICALLY STARTS DOWNLOADING THE REQUIRED SOFTWARE , JUST CLICK ON IT_**
-3.  MongoDB Community Server Link : https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.3-signed.msi
-4.  MongoDB Compass Link : https://downloads.mongodb.com/compass/mongodb-compass-1.44.7-win32-x64.exe
+    1) MongoDB Community Server Link : https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.3-signed.msi
+    2) MongoDB Compass Link : https://downloads.mongodb.com/compass/mongodb-compass-1.44.7-win32-x64.exe
 
-5.  Create a Cloudinary account. ( Link : https://cloudinary.com/users/register_free )
+3.  Create a Cloudinary account. ( Link : https://cloudinary.com/users/register_free )
 
-6.  Install POSTMAN. ( Link : https://www.postman.com/downloads/ )
+4.  Install POSTMAN. ( Link : https://www.postman.com/downloads/ )
 
 ## STEPS :
 
 1.  Clone the repository
 
-2.  Install dependencies - npm install
+2.  Install dependencies - ```npm install```
 
 3.  Edit the config.env file in the root directory, configure the following variables:
 
