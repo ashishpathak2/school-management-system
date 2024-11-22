@@ -61,7 +61,7 @@ For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is 
 
 ---
 
-## 1. GET ALL TEACHERS WITH PAGINATION
+### 1. GET ALL TEACHERS WITH PAGINATION
 
 **Endpoint:**  
 `/teacher/allteacher/:page` (GET)
@@ -74,7 +74,7 @@ For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is 
 
 ---
 
-## 2. GET TEACHER BY ID
+### 2. GET TEACHER BY ID
 
 **Endpoint:**  
 `/teacher/getteacherbyid/:id` (GET)
@@ -87,7 +87,7 @@ For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is 
 
 ---
 
-## 3. ADD TEACHER
+### 3. ADD TEACHER
 
 **Endpoint:**  
 `/teacher/addteacher/` (POST)
@@ -104,7 +104,7 @@ For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is 
 
 ---
 
-## 4. UPDATE TEACHER BY ID
+### 4. UPDATE TEACHER BY ID
 
 **Endpoint:**  
 `/teacher/updateteacherbyid/:id/` (PUT)
@@ -123,7 +123,7 @@ For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is 
 
 ---
 
-## 5. SOFT DELETE TEACHER BY ID
+### 5. SOFT DELETE TEACHER BY ID
 
 **Endpoint:**  
 `/teacher/updateteacherbyid/:id` (DELETE)
