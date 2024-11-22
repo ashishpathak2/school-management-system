@@ -26,7 +26,7 @@
     3. CLOUDINARY_API_KEY=YOUR_CLOUDINARY_API_KEY_HERE
     4. CLOUDINARY_API_SECRET=YOUR_CLOUDINARY_API_SECRET_HERE
 
-4.  Run the Server with Command : `npx nodemon`
+4.  Run the Server with Command : ```npx nodemon```
 
 5.  Access the application:
     1. Open POSTMAN and go to localhost:3000
@@ -207,7 +207,7 @@ For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is 
 **Endpoint:**  
 `/class/deleteclassbyid/:id` (DELETE)
 
-- **Description:**Deletes a class permanently.
+- **Description:** Deletes a class permanently.
 - **Parameters:**
   - `:id` (mandatory): The unique identifier of the class.
 - **Example:**  
@@ -233,8 +233,8 @@ For **ADD**, **UPDATE**, and **DELETE** operations, **ADMIN authentication** is 
   - `:classId` (mandatory pass- "all"): Class Id for filtering students. If filtering not required just pass "all" (mandatory)
   - `:page` : Page number. If left blank, defaults to `1`.
 - **Example:**  
-  `student/allstudent/all/1` - Display all students.
-  `student/allstudent/12345/1` - Display the filtered student only.
+  - `student/allstudent/all/1` - Display all students.
+  - `student/allstudent/12345/1` - Display the filtered student only.
 
 ---
 
